@@ -78,8 +78,8 @@ VALUES
 INSERT INTO SpotifyClone.artista (nome)
 VALUES
     ('Beyoncé'),
-    ('Elis Regina'),
     ('Queen'),
+    ('Elis Regina'),
     ('Baco Exu do Blues'),
     ('Blind Guardian'),
     ('Nina Simone');
@@ -87,10 +87,10 @@ VALUES
 INSERT INTO SpotifyClone.album (artista_id, nome, ano_lancamento)
 VALUES
     (1, 'Renaissance', 2022),
-    (3, 'Jazz', 1978),
-    (3, 'Hot Space', 1982),
-    (2, 'Falso Brilhante', 1998),
-    (2, 'Vento de Maio', 2001),
+    (2, 'Jazz', 1978),
+    (2, 'Hot Space', 1982),
+    (3, 'Falso Brilhante', 1998),
+    (3, 'Vento de Maio', 2001),
     (4, 'QVVJFA?', 2003),
     (5, 'Somewhere Far Beyond', 2007),
     (6, 'I Put A Spell On You', 2012);
@@ -130,17 +130,16 @@ VALUES
 INSERT INTO SpotifyClone.seguindo_artista (pessoa_usuaria_id, artista_id)
 VALUES
     (1, 1),
-    (1, 3),
     (1, 2),
+    (1, 3),
     (2, 1),
-    (2, 2),
-    (3, 3),
+    (2, 3),
+    (3, 2),
     (4, 4),
     (5, 5),
     (5, 6),
     (6, 6),
+    (6, 1),
     (7, 6),
-    (7, 3),
-    (8, 2),
     (9, 3),
-    (10, 3);
+    (10, 2);

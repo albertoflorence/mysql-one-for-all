@@ -13,6 +13,7 @@ CREATE TABLE SpotifyClone.pessoa_usuaria (
     plano_id INT,
     nome VARCHAR(255),
     idade INT,
+    data_assinatura DATE,
     FOREIGN KEY (plano_id) REFERENCES plano(id)
 ) engine = InnoDB;
 
@@ -56,30 +57,23 @@ CREATE TABLE SpotifyClone.seguindo_artista (
 
 INSERT INTO SpotifyClone.plano (tipo, valor)
 VALUES
-    ('Plano Básico', 15.00),
-    ('Plano Premium', 30.00),
-    ('Plano Família', 40.00),
-    ('Plano Master', 60.00);
-
-INSERT INTO SpotifyClone.plano (tipo, valor)
-VALUES
     ('gratuito', 0.00),
     ('familiar', 7.99),
     ('universitário', 5.99),
     ('pessoal', 6.99);
 
-INSERT INTO SpotifyClone.pessoa_usuaria (plano_id, nome, idade)
+INSERT INTO SpotifyClone.pessoa_usuaria (plano_id, nome, idade, data_assinatura)
 VALUES
-  (1, 'Barbara Liskov', 82),
-  (1, 'Robert Cecil Martin', 58),
-  (2, 'Ada Lovelace', 37),
-  (2, 'Martin Fowler', 46),
-  (2, 'Sandi Metz', 58),
-  (3, 'Paulo Freire', 19),
-  (3, 'Bell Hooks', 26),
-  (4, 'Christopher Alexander', 85),
-  (4, 'Judith Butler', 45),
-  (4, 'Jorge Amado', 58);
+  (1, 'Barbara Liskov', 82, '2019-10-20'),
+  (1, 'Robert Cecil Martin', 58, '2017-01-06'),
+  (2, 'Ada Lovelace', 37, '2017-12-30'),
+  (2, 'Martin Fowler', 46, '2017-01-17'),
+  (2, 'Sandi Metz', 58, '2018-04-29'),
+  (3, 'Paulo Freire', 19, '2018-02-14'),
+  (3, 'Bell Hooks', 26, '2018-01-05'),
+  (4, 'Christopher Alexander', 85, '2019-06-05'),
+  (4, 'Judith Butler', 45, '2020-05-13'),
+  (4, 'Jorge Amado', 58, '2017-02-17');
 
 INSERT INTO SpotifyClone.artista (nome)
 VALUES
